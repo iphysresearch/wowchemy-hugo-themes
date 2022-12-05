@@ -22,7 +22,7 @@ yaml.width = 5000  # large column width to avoid line breaks
 master_map = yaml.load(MASTER_PACK)
 
 # Iterate over each child language pack (excluding 'en.yaml').
-files = set(I18N_PATH.glob("*.yaml")) - set([MASTER_PACK])
+files = set(I18N_PATH.glob("*.yaml")) - {MASTER_PACK}
 tot = len(files)
 
 for cnt, filename in enumerate(files):
